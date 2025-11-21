@@ -1,1 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Cat Cafe Index</title>
+html,body{height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+a{color:inherit;text-decoration:none}
 
+
+/* Layout */
+header{background:#0f172a;color:white;padding:0.75rem 1rem}
+.container{max-width:1100px;margin:0 auto}
+
+
+/* Nav Bar */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-weight:700;letter-spacing:0.5px}
+nav ul{list-style:none;display:flex;gap:0.75rem}
+nav a{padding:0.5rem 0.65rem;border-radius:6px;display:inline-block}
+nav a:hover{background:rgba(255,255,255,0.06)}
+
+
+/* Hero */
+.hero{padding:3rem 1rem;background:linear-gradient(180deg,#0b1220 0%, #071026 100%);color:white}
+.hero .inner{display:flex;flex-direction:column;gap:1rem;max-width:900px}
+.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.05}
+.cta{display:inline-block;margin-top:0.5rem;padding:0.6rem 1rem;border-radius:8px;background:#06b6d4;color:#042028;font-weight:600}
+
+
+/* Main: 3 columns */
+main{padding:2rem 1rem}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:white;border-radius:10px;box-shadow:0 6px 18px rgba(3,10,18,0.08);padding:1rem}
+.card h2{margin-bottom:0.5rem;font-size:1.05rem}
+.card p{font-size:0.95rem;color:#334155}
+
+
+/* Footer */
+footer{background:#0b1220;color:#cbd5e1;padding:1rem}
+footer .inner{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+
+
+/* Responsive */
+@media (max-width:900px){
+.three-col{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+nav ul{display:none}
+.three-col{grid-template-columns:1fr}
+.hero{padding:2rem 1rem}
+}
+</style>
+</head>
+<body>
+<!-- Header with navigation -->
+<header>
+<div class="container nav" role="banner">
+<div class="brand">MySite</div>
+<nav role="navigation" aria-label="Main navigation">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+
+<!-- Hero section -->
+<section class="hero" id="home">
+<div class="container inner">
+<h1>Build fast, accessible websites — starting from a clean skeleton</h1>
+<p style="max-width:70ch;opacity:0.9">This minimal template includes a header/navigation, a prominent hero, three equal columns for your main content, and a semantic footer. Customize the sections below to fit your content.</p>
+<a class="cta" href="#features">Get started</a>
+</div>
+</section>
+
+
+<!-- Main: three columns -->
+<main class="container" role="main">
+<div class="three-col">
+<section class="card" id="features" aria-labelledby="f-title">
+<h2 id="f-title">Feature One</h2>
+<p>Short description of the first feature. Use this column for highlights or a short summary.</p>
+</section>
+
+
+<section class="card" id="services" aria-labelledby="s-title">
+<h2 id="s-title">Feature Two</h2>
+<p>Short description of the second feature. This column could include a list of capabilities or quick stats.</p>
+</section>
+
+
+<section class="card" id="signup" aria-labelledby="u-title">
+<h2 id="u-title">Feature Three</h2>
+</html>
