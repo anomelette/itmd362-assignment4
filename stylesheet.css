@@ -59,11 +59,12 @@ nav a:hover {
 
 /* Hero */
 .hero {
-  padding: 3rem 1rem;
+  padding: 6rem 1rem; 
   background-image: url('cat ceramic cups.jpg');
-  background-size: contain;
-  background: #FFD4D1;
-  color: #FF8279;
+  background-size: cover;
+  background-position-y: -450px;
+  opacity: .5;
+  color: #FF5259;
 }
 
 .hero .inner {
