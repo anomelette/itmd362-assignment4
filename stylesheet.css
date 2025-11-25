@@ -150,40 +150,47 @@ main {
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 400px; /* optional max width */
+  max-width: 400px;
   overflow: hidden;
-  margin: 1.5rem 0; /* space above and below */
+  margin: 1.5rem 0;
+  height: 250px; /* set a fixed height to prevent layout jump */
 }
 
 .carousel-image {
   width: 100%;
-  display: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;                       /* hidden */
+  transition: opacity 0.8s ease-in-out; /* smooth fade */
   border-radius: 10px;
+  object-fit: cover;                 /* maintain aspect ratio */
 }
 
 .carousel-image.active {
-  display: block;
+  opacity: 1;                       /* visible */
+  z-index: 1;
 }
 
+/* Carousel buttons */
 .carousel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255,255,255,0.7);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 50%;
   cursor: pointer;
   font-size: 1.5rem;
+  z-index: 2;
 }
 
-.carousel button.prev {
-  left: 10px;
-}
+.carousel button.prev { left: 10px; }
+.carousel button.next { right: 10px; }
 
-.carousel button.next {
-  right: 10px;
-}
+
 
 /* Footer */
 footer {
