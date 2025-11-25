@@ -68,5 +68,36 @@
       </div> <!-- end three-col -->
     </main>
 
+
+/* Java Script */
+    <script>
+      const carouselImages = document.querySelectorAll(".carousel-image");
+      const prevBtn = document.querySelector(".carousel .prev");
+      const nextBtn = document.querySelector(".carousel .next");
+      
+      let currentIndex = 0;
+      
+      function showImage(index) {
+        carouselImages.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+        });
+      }
+      
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+        showImage(currentIndex);
+      });
+      
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % carouselImages.length;
+        showImage(currentIndex);
+      });
+      
+      // Optional: automatic slideshow every 3 seconds
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % carouselImages.length;
+        showImage(currentIndex);
+      }, 3000);
+      </script>
   </body>
 </html>
