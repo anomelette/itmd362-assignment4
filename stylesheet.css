@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +21,6 @@ header {
   color: #FF3F85;
   padding: 0.75rem 1rem;
   font-size: 20px;
-  ;
 }
 
 .container {
@@ -34,7 +32,6 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   justify-content: center; 
   gap: 3rem;
 }
@@ -68,7 +65,7 @@ nav a:hover {
   background-image: url('cat ceramic cups.jpg');
   background-size: cover;
   background-position-y: -450px;
-  opacity: .5;
+  opacity: 0.5;
   color: #FF004F;
 }
 
@@ -85,19 +82,8 @@ nav a:hover {
 }
 
 .hero h2 {
-  font:icon;
   font-size: clamp(2rem, 4vw, 2.4rem);
   line-height: 1.05;
-}
-
-.cta {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  background: #06b6d4;
-  color: #042028;
-  font-weight: 600;
 }
 
 /* Main: 3 columns */
@@ -109,83 +95,56 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
-  max-width: none;
   width: 100%;
-
-  
-}
-
-.three-col section#Hours {
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  border-radius: 0;
-  text-align: center;
-  color: #FF0000;
-}
-
-
-.card {
-  background: #FFD4D1;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(3, 10, 18, 0.08);
-  padding: 1rem;
-  display: flex;           
-  flex-direction: column;  
-  text-align: center;
-  justify-content: space-between;
-}
-
-#Hours,
-#Hours * {
-  color: #FF3F85 !important;
-  text-align: center;
-}
-
-#Hours .menu-button {
-  background: #E1DF89;  /* your button color */
-  color: #554480 !important;
-}
-
-.card h2 {
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
   color: #554480;
+  font-size: 15px;
 }
 
-.card p {
-  font-size: 1.5rem;
-  color: #554480;
+/* Sections (no cards) */
+.three-col section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* BUTTON: rounded, raised, visually clickable */
-.card .menu-button {
-  margin-top: auto;                /* Pushes button to bottom of each card */
-  display: inline-block;
+/* Special styling for Hours column */
+#Hours {
+  color: #FF3F85;
+}
+
+/* Section buttons */
+.three-col section .menu-button {
+  margin-top: 2.5rem;
   padding: 0.75rem 1.25rem;
-  border-radius: 50px;             /* Rounded button shape */
-  background: #E1DF89;             /* Cat-cafe pink */
+  border-radius: 50px;
+  background: #E1DF89;
   color: #554480;
   font-weight: 600;
   text-align: center;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Soft button shadow */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  margin-top: 2.5rem;
 }
 
-.card .menu-button:hover {      
+.three-col section .menu-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
-.card .menu-button:active {
-  transform: translateY(0);        /* Pressed button feel */
+.three-col section .menu-button:active {
+  transform: translateY(0);
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
-
+.menu-image {
+  max-width: 100%;       /* makes the image responsive */
+  height: auto;          /* keeps aspect ratio */
+  border-radius: 10px;   /* optional rounded corners */
+  margin: 1.5rem 0;      /* spacing above and below the image */
+  display: block;
+}
 
 /* Footer */
 footer {
