@@ -146,6 +146,45 @@ main {
   display: block;
 }
 
+/* Image Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* optional max width */
+  overflow: hidden;
+  margin: 1.5rem 0; /* space above and below */
+}
+
+.carousel-image {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.carousel button.prev {
+  left: 10px;
+}
+
+.carousel button.next {
+  right: 10px;
+}
+
 /* Footer */
 footer {
   background: #FFD4D1;
