@@ -287,8 +287,8 @@ main {
 
 /* Footer */
 footer {
-  background: #FFD4D1;
-  color: #cbd5e1;
+  background: #FF3F85;      /* strong pink so it stands out */
+  color: white;             /* high contrast */
   padding: 1rem;
 }
 
@@ -298,6 +298,16 @@ footer .inner {
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
+}
+
+footer a {
+  color: #E1DF89;           /* soft yellow accent */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
