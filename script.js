@@ -1,4 +1,3 @@
-// Interaction 1: Holiday popup
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("holiday-popup");
   const closeBtn = document.getElementById("close-popup");
