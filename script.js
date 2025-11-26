@@ -50,25 +50,40 @@ window.addEventListener("resize", updateCarousel);
 // --------------------------
 // Adopt Us Contact Prompt
 // --------------------------
-<div id="adopt-modal" class="modal-overlay">
-    <div class="modal-content">
-        <h2>Adoption Inquiry</h2>
-        <p>Please enter your information so we can contact you:</p>
+document.addEventListener("DOMContentLoaded", function () {
 
-        <form id="adopt-form">
-            <label for="adopt-name">Full Name:</label>
-            <input type="text" id="adopt-name" required>
+    // OPEN MODAL
+    const adoptBtn = document.getElementById("adopt-btn");
+    const adoptModal = document.getElementById("adopt-modal");
+    const closeAdopt = document.getElementById("close-adopt-modal");
 
-            <label for="adopt-contact">Email or Phone:</label>
-            <input type="text" id="adopt-contact" required>
+    adoptBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        adoptModal.style.display = "flex";
+    });
 
-            <div class="modal-buttons">
-                <button type="submit" class="submit-button">Submit</button>
-                <button type="button" id="close-adopt-modal" class="close-button">Cancel</button>
-            </div>
-        </form>
-    </div>
-</div>
+    // CLOSE MODAL
+    closeAdopt.addEventListener("click", function () {
+        adoptModal.style.display = "none";
+    });
+
+    // SUBMIT FORM
+    document.getElementById("adopt-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("adopt-name").value.trim();
+        const contact = document.getElementById("adopt-contact").value.trim();
+
+        if (!name || !contact) {
+            alert("Please fill out all fields.");
+            return;
+        }
+
+        alert(`Thanks, ${name}! We'll reach out to you at: ${contact}`);
+        adoptModal.style.display = "none";
+    });
+
+});
 
 //document.addEventListener("DOMContentLoaded", function () {
 
