@@ -37,7 +37,7 @@ prevBtn.addEventListener("click", () => {
   updateCarousel();
 });
 
-// Auto-slide every 8 seconds
+// Auto-slide the images every 8 seconds (8000ms)
 setInterval(() => {
   currentIndex = (currentIndex + 1) % images.length;
   updateCarousel();
@@ -46,28 +46,24 @@ setInterval(() => {
 // Adjust slide width on window resize
 window.addEventListener("resize", updateCarousel);
 
-// Interaction 3: User info prompt
-// --------------------------
-// Adopt Us Contact Prompt
-// --------------------------
+// Interaction 3: Adoption contact prompt
 document.addEventListener("DOMContentLoaded", function () {
-
-    // OPEN MODAL
     const adoptBtn = document.getElementById("adopt-btn");
     const adoptModal = document.getElementById("adopt-modal");
     const closeAdopt = document.getElementById("close-adopt-modal");
 
+    // open modal when button is clicked
     adoptBtn.addEventListener("click", function (event) {
         event.preventDefault();
         adoptModal.style.display = "flex";
     });
 
-    // CLOSE MODAL
+    // close modal with close button
     closeAdopt.addEventListener("click", function () {
         adoptModal.style.display = "none";
     });
 
-    // SUBMIT FORM
+    // Contact form
     document.getElementById("adopt-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -78,38 +74,18 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please fill out all fields.");
             return;
         }
+      
+    // Thank you message
+    document.getElementById("thankyou-message").textContent =
+        `Thanks, ${name}! We'll reach out to you at: ${contact}`;
+      
+    adoptModal.style.display = "none";
 
-        alert(`Thanks, ${name}! We'll reach out to you at: ${contact}`);
-        adoptModal.style.display = "none";
+    const thankyouPopup = document.getElementById("thankyou-popup");
+    thankyouPopup.classList.remove("hidden");
+
+    document.getElementById("close-thankyou").onclick = () => {
+        thankyouPopup.classList.add("hidden");
     });
 
 });
-
-//document.addEventListener("DOMContentLoaded", function () {
-
-//    const adoptBtn = document.getElementById("adopt-btn");
-
-//    if (adoptBtn) {
-//        adoptBtn.addEventListener("click", function(event) {
-//            event.preventDefault();
-
-//            const name = prompt("Please enter your full name:");
-//            if (!name) {
-//                alert("Changed your mind? No worries!");
-//                return;
-//            }
-
-//            const contact = prompt("Please enter your email or phone number so we can send adoption updates:");
-//            if (!contact) {
-//                alert("Changed your mind? No worries!");
-//                return;
-//            }
-
-//            alert("Thanks, " + name + "! We'll reach out to you at: " + contact);
-//        });
-//    } else {
-//        console.error("Adopt button not found!");
-//    }
-
-//});
-
