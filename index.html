@@ -55,49 +55,22 @@
 
         <section class="card" id="gallery" aria-labelledby="u-title">
           <h2 id="u-title">Meet our furry friends!</h2>
-          <div class="carousel">
-            <img src="catslounging.jpg" alt="Cat 1" class="carousel-image active">
-            <img src="cats and coffee.jpg" alt="Cat 2" class="carousel-image">
-            
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <img src="img1.jpg" class="carousel-image">
+              <img src="img2.jpg" class="carousel-image">
+              <img src="img3.jpg" class="carousel-image">
+            </div>
+          
+            <button class="carousel-btn prev-btn">❮</button>
+            <button class="carousel-btn next-btn">❯</button>
           </div>
+          <script src="script.js"></script>
+          
           <a href="adopt.html" class="menu-button">Adopt Us!</a>
         </section>
 
       </div> <!-- end three-col -->
     </main>
-
-
-
-    <script>
-      const carouselImages = document.querySelectorAll(".carousel-image");
-      const prevBtn = document.querySelector(".carousel .prev");
-      const nextBtn = document.querySelector(".carousel .next");
-      
-      let currentIndex = 0;
-      
-      function showImage(index) {
-        carouselImages.forEach((img, i) => {
-          img.classList.toggle("active", i === index);
-        });
-      }
-      
-      prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
-        showImage(currentIndex);
-      });
-      
-      nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % carouselImages.length;
-        showImage(currentIndex);
-      });
-      
-      // Optional: automatic slideshow every 3 seconds
-      setInterval(() => {
-        currentIndex = (currentIndex + 1) % carouselImages.length;
-        showImage(currentIndex);
-      }, 8000);
-      </script>
   </body>
 </html>
