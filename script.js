@@ -50,31 +50,51 @@ window.addEventListener("resize", updateCarousel);
 // --------------------------
 // Adopt Us Contact Prompt
 // --------------------------
-document.addEventListener("DOMContentLoaded", function () {
+<div id="adopt-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Adoption Inquiry</h2>
+        <p>Please enter your information so we can contact you:</p>
 
-    const adoptBtn = document.getElementById("adopt-btn");
+        <form id="adopt-form">
+            <label for="adopt-name">Full Name:</label>
+            <input type="text" id="adopt-name" required>
 
-    if (adoptBtn) {
-        adoptBtn.addEventListener("click", function(event) {
-            event.preventDefault();
+            <label for="adopt-contact">Email or Phone:</label>
+            <input type="text" id="adopt-contact" required>
 
-            const name = prompt("Please enter your full name:");
-            if (!name) {
-                alert("Changed your mind? No worries!");
-                return;
-            }
+            <div class="modal-buttons">
+                <button type="submit" class="submit-button">Submit</button>
+                <button type="button" id="close-adopt-modal" class="close-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-            const contact = prompt("Please enter your email or phone number so we can send adoption updates:");
-            if (!contact) {
-                alert("Changed your mind? No worries!");
-                return;
-            }
+//document.addEventListener("DOMContentLoaded", function () {
 
-            alert("Thanks, " + name + "! We'll reach out to you at: " + contact);
-        });
-    } else {
-        console.error("Adopt button not found!");
-    }
+//    const adoptBtn = document.getElementById("adopt-btn");
 
-});
+//    if (adoptBtn) {
+//        adoptBtn.addEventListener("click", function(event) {
+//            event.preventDefault();
+
+//            const name = prompt("Please enter your full name:");
+//            if (!name) {
+//                alert("Changed your mind? No worries!");
+//                return;
+//            }
+
+//            const contact = prompt("Please enter your email or phone number so we can send adoption updates:");
+//            if (!contact) {
+//                alert("Changed your mind? No worries!");
+//                return;
+//            }
+
+//            alert("Thanks, " + name + "! We'll reach out to you at: " + contact);
+//        });
+//    } else {
+//        console.error("Adopt button not found!");
+//    }
+
+//});
 
