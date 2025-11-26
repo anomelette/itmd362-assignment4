@@ -50,21 +50,31 @@ window.addEventListener("resize", updateCarousel);
 // --------------------------
 // Adopt Us Contact Prompt
 // --------------------------
-document.getElementById("adopt-btn").addEventListener("click", function(event) {
-    event.preventDefault(); // prevent immediate page navigation
-    
-    const name = prompt("Please enter your full name:");
-    if (!name) {
-        alert("Changed your mind? No worries!");
-        return;
+document.addEventListener("DOMContentLoaded", function () {
+
+    const adoptBtn = document.getElementById("adopt-btn");
+
+    if (adoptBtn) {
+        adoptBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const name = prompt("Please enter your full name:");
+            if (!name) {
+                alert("Changed your mind? No worries!");
+                return;
+            }
+
+            const contact = prompt("Please enter your email or phone number so we can send adoption updates:");
+            if (!contact) {
+                alert("Changed your mind? No worries!");
+                return;
+            }
+
+            alert("Thanks, " + name + "! We'll reach out to you at: " + contact);
+        });
+    } else {
+        console.error("Adopt button not found!");
     }
 
-    const contact = prompt("Please enter your email or phone number so we can send adoption updates:");
-    if (!contact) {
-        alert("Changed your mind? No worries!");
-        return;
-    }
-
-    alert("Thanks, " + name + "! We'll reach out to you at: " + contact);
 });
 
