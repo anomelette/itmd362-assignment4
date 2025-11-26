@@ -85,6 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("close-thankyou").onclick = () => {
         thankyouPopup.classList.add("hidden");
-    });
+    };
 
 });
