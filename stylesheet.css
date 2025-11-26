@@ -287,8 +287,8 @@ main {
 
 /* Footer */
 footer {
-  background: #FF3F85;      /* strong pink so it stands out */
-  color: white;             /* high contrast */
+  background: #FFD4D1;      
+  color: #FF3F85;             
   padding: 1rem;
 }
 
