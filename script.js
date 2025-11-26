@@ -1,4 +1,18 @@
-// Interaction 1: Image Carousel
+// Interaction 1: Holiday popup
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("holiday-popup");
+  const closeBtn = document.getElementById("close-popup");
+
+  // Show popup when page loads
+  popup.classList.remove("hidden");
+
+  // Close when clicking button
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+});
+
+// Interaction 2: Image Carousel
 const track = document.querySelector(".carousel-track");
 const images = document.querySelectorAll(".carousel-image");
 const prevBtn = document.querySelector(".prev-btn");
