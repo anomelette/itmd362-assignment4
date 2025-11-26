@@ -79,6 +79,26 @@
           <a class="menu-button" id="adopt-btn">Adopt Us!</a>
         </section>
 
+        <div id="adopt-modal" class="modal-overlay">
+          <div class="modal-content">
+                  <h2>Adoption Inquiry</h2>
+                  <p>Please enter your information so we can contact you:</p>
+          
+                  <form id="adopt-form">
+                      <label for="adopt-name">Full Name:</label>
+                      <input type="text" id="adopt-name" required>
+          
+                      <label for="adopt-contact">Email or Phone:</label>
+                      <input type="text" id="adopt-contact" required>
+          
+                      <div class="modal-buttons">
+                          <button type="submit" class="submit-button">Submit</button>
+                          <button type="button" id="close-adopt-modal" class="close-button">Cancel</button>
+                      </div>
+                  </form>
+              </div>
+        </div>
+
       </div> <!-- end three-col -->
     </main>
 
