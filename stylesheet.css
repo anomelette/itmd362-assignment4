@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* General styling for webpage */
 html, body {
   height: 100%;
   background-image: url('purplecloud.png');
@@ -16,7 +17,7 @@ a {
   text-decoration: none;
 }
 
-/* Holiday popup */
+/* Holiday popup -- pops up when user enters website with Holiday business hour changes */
 .popup {
   position: fixed;
   top: 0;
@@ -84,7 +85,7 @@ header {
   margin: 0 auto;
 }
 
-/* Navigation */
+/* Navigation Bar */
 .nav {
   display: flex;
   align-items: center;
@@ -115,7 +116,7 @@ nav a:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   position: relative;
   padding: 6rem 1rem;
@@ -148,6 +149,7 @@ nav a:hover {
   line-height: 1.05;
 }
 
+<!-- Creating color overlay on background image -->
 .hero::before {
   content: "";
   position: absolute;
@@ -182,7 +184,7 @@ main {
   align-items: center;
 }
 
-/* Hours column */
+/* Middle Column: Hours -- Separate styling than left and right columns */
 #Hours {
   color: #FF3F85;
 
@@ -201,7 +203,7 @@ main {
   margin: 8.1rem 0;
 }
 
-/* Section buttons */
+/* Column buttons -- button at bottom of each column */
 .three-col section .menu-button {
   margin-top: 2.5rem;
   padding: 1.5rem 6rem;
@@ -234,7 +236,7 @@ main {
   display: block;
 }
 
-/* Image Carousel */
+/* Image Carousel -- Slides through several images automatically */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -280,7 +282,7 @@ main {
 .prev-btn { left: 12px; }
 .next-btn { right: 12px; }
 
-/* Modal Overlay */
+/* Contact Prompt -- pops up when user clicks Adopt Me! button */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -295,7 +297,6 @@ main {
     z-index: 1000;
 }
 
-/* Contact Prompt */
 .modal-content {
     background: #E1DF89;
     color: #554480;
@@ -353,11 +354,6 @@ main {
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
-}
-
-#thankyou-popup .popup-content {
-  background: #FFE6E4; 
-  color: #FF3F85;
 }
 
 /* Footer */
