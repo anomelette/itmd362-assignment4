@@ -226,9 +226,9 @@ main {
 }
 
 .menu-image {
-  max-width: 100%;       /* makes the image responsive */
-  height: 310px;          /* keeps aspect ratio */
-  border-radius: 10px;   /* optional rounded corners */
+  max-width: 100%;
+  height: 310px;
+  border-radius: 10px;
   margin: 1.5rem 0;      
   display: block;
 }
@@ -273,7 +273,7 @@ main {
   border-radius: 50%;
   cursor: pointer;
   font-size: 1.5rem;
-  z-index: 5;        /* ensures it's on top of the image */
+  z-index: 5;
 }
 
 .prev-btn { left: 12px; }
