@@ -6,7 +6,7 @@
 
 html, body {
   height: 100%;
-  background: #ffe6e4;
+  background-image: url('background.png');
   font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
 }
 
