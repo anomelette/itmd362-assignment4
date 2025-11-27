@@ -63,21 +63,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Contact form submission
-  document.getElementById("adopt-form").addEventListener("submit", function (event) {
-      event.preventDefault();
+    document.getElementById("adopt-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+    
+        const name = document.getElementById("adopt-name").value.trim();
+        const contact = document.getElementById("adopt-contact").value.trim();
+    
+        if (!name || !contact) {
+            alert("Please fill out all fields.");
+            return;
+        }
+    
+        // Hide the adopt modal
+        adoptModal.style.display = "none";
+    
+        // Show thank-you popup with personalized message
+        const thankyouPopup = document.getElementById("thankyou-popup");
+        const thankyouMessage = document.getElementById("thankyou-message");
+        thankyouMessage.textContent = `Thanks, ${name}! We'll reach out to you at: ${contact}`;
+    
+        thankyouPopup.classList.remove("hidden");
+    
+        // Close thank-you popup
+        document.getElementById("close-thankyou").onclick = () => {
+            thankyouPopup.classList.add("hidden");
+        };
+    
+        // Optional: reset form for next use
+        document.getElementById("adopt-form").reset();
+    });
   
-      const name = document.getElementById("adopt-name").value.trim();
-      const contact = document.getElementById("adopt-contact").value.trim();
+  //document.getElementById("adopt-form").addEventListener("submit", function (event) {
+  //    event.preventDefault();
   
-      if (!name || !contact) {
-          alert("Please fill out all fields.");
-          return;
-      }
+  //    const name = document.getElementById("adopt-name").value.trim();
+  //    const contact = document.getElementById("adopt-contact").value.trim();
   
-      alert(`Thanks, ${name}! We'll reach out to you at: ${contact}`);
+  //    if (!name || !contact) {
+  //        alert("Please fill out all fields.");
+  //        return;
+  //    }
   
-      adoptModal.style.display = "none";
-  });
+  //    alert(`Thanks, ${name}! We'll reach out to you at: ${contact}`);
+  
+  //    adoptModal.style.display = "none";
+  //});
 
 });
 
