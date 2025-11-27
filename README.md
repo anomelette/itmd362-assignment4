@@ -3,9 +3,10 @@
 **Design Implemented**
 
 I implemented my figma design from my Monday In-class Activity Webpage
-<img width="1221" height="877" alt="image" src="https://github.com/user-attachments/assets/a493b3a2-b5ae-476b-a60f-c683e932f794" />
+<img width="821" height="477" alt="image" src="https://github.com/user-attachments/assets/a493b3a2-b5ae-476b-a60f-c683e932f794" />
 
 **JavaScript Interactions**
+
 Interaction 1: Holiday Popup
 This interaction gives the user a popup when they first enter the website. This popup includes important changes to the fictional business's hours of operation due to the holidays, and includes a close button for the user to close it and continue to viewing the website.
 
@@ -16,3 +17,6 @@ Interaction 3: Contact Form Prompt
 This interaction is enabled when the user clicks the "Adopt Us!" button. It opens up a prompt for the user to enter their contact information so that the business can contact them with adoption information.
 
 **Challenges Faced**
+
+One challenge I faced was with getting a colored overlay on the background image in the Hero section; it was a lot more difficult for me to figure it out than I expected it to be.
+Some other challenges I had was with the JavaScript. For the image carousel, I was having issues sizing the container and getting the images to fit without stretching them. I also had some syntax troubles when making the adoption contact info prompt, which I was able to solve using a JavaScript validator.
