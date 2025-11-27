@@ -43,7 +43,6 @@ setInterval(() => {
   updateCarousel();
 }, 8000);
 
-// Adjust slide width on window resize
 window.addEventListener("resize", updateCarousel);
 
 // Interaction 3: Adoption contact prompt
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         adoptModal.style.display = "none";
     });
 
-    // Contact form submit
+    // Contact form submission
     document.getElementById("adopt-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
