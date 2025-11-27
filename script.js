@@ -1,3 +1,4 @@
+// Interaction 1: Holiday popup
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("holiday-popup");
   const closeBtn = document.getElementById("close-popup");
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         adoptModal.style.display = "none";
     });
 
-    // Contact form
+    // Contact form submit
     document.getElementById("adopt-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -73,18 +74,20 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Please fill out all fields.");
             return;
         }
-      
-    // Thank you message
-    document.getElementById("thankyou-message").textContent =
-        `Thanks, ${name}! We'll reach out to you at: ${contact}`;
-      
-    adoptModal.style.display = "none";
 
-    const thankyouPopup = document.getElementById("thankyou-popup");
-    thankyouPopup.classList.remove("hidden");
+        // Thank you message
+        document.getElementById("thankyou-message").textContent =
+            `Thanks, ${name}! We'll reach out to you at: ${contact}`;
 
-    document.getElementById("close-thankyou").onclick = () => {
-        thankyouPopup.classList.add("hidden");
-    };
+        adoptModal.style.display = "none";
+
+        const thankyouPopup = document.getElementById("thankyou-popup");
+        thankyouPopup.classList.remove("hidden");
+
+        document.getElementById("close-thankyou").onclick = () => {
+            thankyouPopup.classList.add("hidden");
+        };
+    }); 
 
 });
+
