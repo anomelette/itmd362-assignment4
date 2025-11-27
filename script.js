@@ -65,27 +65,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Contact form submission
     document.getElementById("adopt-form").addEventListener("submit", function (event) {
         event.preventDefault();
-
+    
         const name = document.getElementById("adopt-name").value.trim();
         const contact = document.getElementById("adopt-contact").value.trim();
-
+    
         if (!name || !contact) {
             alert("Please fill out all fields.");
             return;
         }
-
-        // Thank you message
-        document.getElementById("thankyou-message").textContent =
-            `Thanks, ${name}! We'll reach out to you at: ${contact}`;
-
+    
+        alert(`Thanks, ${name}! We'll reach out to you at: ${contact}`);
+    
         adoptModal.style.display = "none";
-
-        const thankyouPopup = document.getElementById("thankyou-popup");
-        thankyouPopup.classList.remove("hidden");
-
-        document.getElementById("close-thankyou").onclick = () => {
-            thankyouPopup.classList.add("hidden");
-        };
     }); 
 
 });
