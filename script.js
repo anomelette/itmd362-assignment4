@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const adoptBtn = document.getElementById("adopt-btn");
     const adoptModal = document.getElementById("adopt-modal");
     const closeAdopt = document.getElementById("close-adopt-modal");
+});
 
     // open prompt when button is clicked
     adoptBtn.addEventListener("click", function (event) {
